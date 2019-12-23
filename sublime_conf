@@ -1,0 +1,33 @@
+{
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"color_scheme": "Monokai Pro (Filter Octagon).sublime-color-scheme",
+	"draw_indent_guides": true,
+	"enable_tab_scrolling": false,
+	"font_face": "Fira Code",
+	"font_size": 12,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"monokai_pro_file_icons_monochrome": true,
+	"monokai_pro_highlight_open_folders": true,
+	"monokai_pro_small_scrollbar": true,
+	"monokai_pro_style_title_bar": true,
+	"open_files_in_new_window": false,
+	"scroll_past_end": true,
+	"tab_size": 4,
+	"theme": "Monokai Pro (Filter Octagon).sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"wide_caret": true,
+	"word_wrap": true
+}
