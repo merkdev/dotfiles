@@ -7,12 +7,12 @@ tap "homebrew/cask-fonts"
 
 brew "awscli"
 brew "composer"
-brew "nodejs"
+brew "nvm"
 brew "curl"
 brew "git"
 brew "insomnia"
 brew "heroku"
-brew "firebase-cli"
+brew "firebase-cli" # npm install -g firebase-tools
 brew "trash"
 brew "homebrew/cask-fonts/font-fira-code"
 brew "tree"
@@ -22,3 +22,20 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "pngquant"
 brew "jpegoptim"
+
+# Apps
+brew "iterm2"
+brew "postico"
+brew "dropbox"
+brew "slack"
+brew "discord"
+brew "firefox"
+brew "google-chrome"
+brew "opera"
+brew "aware"
+brew "docker"
+brew "vlc"
+brew "sublime-text"
+
+cask 'the-unarchiver'
+cask 'whatsapp'
