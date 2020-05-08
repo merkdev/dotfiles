@@ -15,6 +15,7 @@ brew "heroku"
 brew "firebase-cli" # npm install -g firebase-tools
 brew "trash"
 brew "homebrew/cask-fonts/font-fira-code"
+brew "homebrew/cask-fonts/font-jetbrains-mono"
 brew "tree"
 brew "speedtest-cli"
 brew "zsh"
