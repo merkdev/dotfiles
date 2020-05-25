@@ -7,7 +7,7 @@ tap "homebrew/cask-fonts"
 
 brew "awscli"
 brew "composer"
-brew "nvm"
+brew "node"
 brew "curl"
 brew "git"
 brew "insomnia"
