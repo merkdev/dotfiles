@@ -39,4 +39,4 @@ brew "vlc"
 brew "sublime-text"
 
 cask 'the-unarchiver'
-cask 'whatsapp'
+cask 'visual-studio-code'
