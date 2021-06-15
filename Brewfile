@@ -7,12 +7,11 @@ tap "homebrew/cask-fonts"
 
 brew "awscli"
 brew "composer"
-brew "node"
+brew "nvm"
 brew "curl"
 brew "git"
 brew "insomnia"
 brew "heroku"
-brew "firebase-cli" # npm install -g firebase-tools
 brew "trash"
 brew "homebrew/cask-fonts/font-fira-code"
 brew "homebrew/cask-fonts/font-jetbrains-mono"
@@ -23,6 +22,10 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "pngquant"
 brew "jpegoptim"
+brew "subversion"
+brew "sqlite"
+brew "mkcert"
+brew "bandwhich"
 
 # Apps
 brew "iterm2"
@@ -37,6 +40,17 @@ brew "aware"
 brew "docker"
 brew "vlc"
 brew "sublime-text"
+brew "sequel-pro"
+brew "whatsapp"
+brew "forklift"
+brew "numi"
+brew "ticktick"
+brew "skype"
+brew "github"
+brew "tableplus"
+brew "jumpshare"
 
 cask 'the-unarchiver'
 cask 'visual-studio-code'
+
+# bandwidth+ , photoscapex , cointick , sip , gravitdesigner, craft , twitch studio
