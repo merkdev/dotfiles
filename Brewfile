@@ -21,6 +21,8 @@ brew "zsh-syntax-highlighting"
 brew "sqlite"
 brew "mkcert"
 brew "bandwhich"
+brew "flyctl"
+brew "act"
 
 # Apps
 brew "iterm2"
