@@ -23,6 +23,8 @@ brew "mkcert"
 brew "bandwhich"
 brew "flyctl"
 brew "act"
+brew "go"
+brew "dbmate
 
 # Apps
 brew "iterm2"
