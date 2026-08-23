@@ -57,6 +57,9 @@ link warp/settings.toml         "$HOME/.warp/settings.toml"
 link warp/themes                "$HOME/.warp/themes"
 link warp/tab_configs           "$HOME/.warp/tab_configs"
 
+link zed/settings.json           "$HOME/.config/zed/settings.json"
+link zed/keymap.json             "$HOME/.config/zed/keymap.json"
+
 link sublime/Preferences.sublime-settings \
 	"$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
 

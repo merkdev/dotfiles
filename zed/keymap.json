@@ -1,0 +1,26 @@
+[
+  {
+    "bindings": {
+      "cmd-shift-d": "editor::DuplicateLineDown",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem",
+      "ctrl-tab": "pane::ActivateNextItem",
+      "cmd-k cmd-m": "workspace::ToggleZoom",
+      "cmd-y": "editor::Redo"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "shift-enter": [
+        "terminal::SendText",
+        "\u001b\r"
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-/": "editor::ToggleComments"
+    }
+  }
+]

@@ -1,0 +1,140 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+	"disable_ai": false,
+ "diff_view_style": "unified",
+ "cli_default_open_behavior": "new_window",
+ "proxy": "",
+ "agent_servers": {
+  "gemini": {
+   "type": "registry"
+  },
+  "codex-acp": {
+   "type": "registry"
+  },
+  "claude-acp": {
+   "default_config_options": {
+    "fast": false,
+    "model": "opus[1m]",
+    "effort": "max"
+   },
+   "favorite_config_option_values": {
+    "effort": [
+     "max"
+    ],
+    "mode": [
+     "plan"
+    ]
+   },
+   "type": "registry"
+  }
+ },
+ "outline_panel": {
+  "dock": "right"
+ },
+ "collaboration_panel": {
+  "dock": "right"
+ },
+ "buffer_font_family": "JetBrains Mono",
+ "edit_predictions": {
+  "provider": "zed"
+ },
+ "project_panel": {
+  "dock": "right"
+ },
+ "base_keymap": "SublimeText",
+ "soft_wrap": "prefer_line",
+ "show_wrap_guides": false,
+ "git_panel": {
+		"group_by": "status",
+  "sort_by_path": true,
+  "dock": "right",
+  "tree_view": true,
+	},
+	"context_servers": {
+		},
+	"terminal": {
+		"dock": "bottom",
+  "flexible": true,
+  "default_height": 320.0,
+		"toolbar": {
+			"breadcrumbs": false,
+		},
+		"minimum_contrast": 45.0,
+		"font_weight": 400.0,
+		"font_size": 12.0,
+	},
+	"ui_font_size": 15.0,
+	"buffer_line_height": "comfortable",
+	"buffer_font_weight": 400.0,
+	"icon_theme": {
+  "mode": "dark",
+  "light": "Colored Zed Icons Theme Light",
+  "dark": "Colored Zed Icons Theme Dark"
+ },
+	"agent": {
+		"single_file_review": false,
+  "dock": "left",
+  "tool_permissions": {
+   "default": "allow"
+  },
+		"default_profile": "write",
+		"default_model": {
+			"enable_thinking": true,
+   "effort": "high",
+   "provider": "copilot_chat",
+			"model": "gpt-5-mini",
+		},
+	},
+	// Inlay hint related settings
+	"inlay_hints": {
+		// Global switch to toggle hints on and off, switched off by default.
+		"enabled": false,
+		// Toggle certain types of hints on and off, all switched on by default.
+		"show_type_hints": true,
+		"show_parameter_hints": true,
+		// Corresponds to null/None LSP hint type value.
+		"show_other_hints": true,
+		// Time to wait after editing the buffer, before requesting the hints,
+		// set to 0 to disable debouncing.
+		"edit_debounce_ms": 700,
+		// Time to wait after scrolling the buffer, before requesting the hints,
+		// set to 0 to disable debouncing.
+		"scroll_debounce_ms": 50,
+	},
+	"theme": {
+		"mode": "system",
+		"light": "Zedokai Light",
+		"dark": "Zedokai Darker",
+	},
+	"buffer_font_size": 13.0,
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false,
+	},
+	"ui_font_family": "JetBrains Mono",
+	"git": {
+		"inline_blame": {
+			"enabled": false,
+		},
+	},
+	"toolbar": {
+		"breadcrumbs": false,
+		"quick_actions": false,
+	},
+	"tab_size": 2,
+	"show_whitespaces": "all",
+	"format_on_save": "on",
+	"tab_bar": { "show": true,
+              "show_nav_history_buttons": false },
+	"tabs": {
+		"file_icons": false,
+  "git_status": false,
+	},
+}
