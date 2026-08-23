@@ -1,0 +1,23 @@
+{
+	"theme": "auto",
+	"color_scheme": "auto",
+	"open_files_in_new_window": "false",
+	"tab_size": 2,
+	"font_size": 13,
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"font_face": "JetBrains Mono",
+	"word_wrap": "true",
+	"draw_white_space": "all",
+	"font_options": [
+		"dlig",
+		"ss01",
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"index_files": true,
+}
