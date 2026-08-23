@@ -16,8 +16,8 @@ relink: ## Show what would change without touching anything (dry run)
 brew: ## Install everything in the Brewfile
 	brew bundle --file=Brewfile
 
-dump: ## Regenerate the Brewfile from this machine
-	brew bundle dump --file=Brewfile --describe --force
+dump: ## Regenerate the Brewfile from this machine (keeps hand-added entries)
+	@bash scripts/dump.sh
 	@echo "Brewfile updated — review it with 'git diff Brewfile'."
 
 doctor: ## Check that the symlinks are in place
