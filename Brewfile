@@ -147,7 +147,6 @@ go "github.com/sqlc-dev/sqlc/cmd/sqlc"
 go "honnef.co/go/tools/cmd/staticcheck"
 go "github.com/swaggo/swag/cmd/swag"
 go "github.com/a-h/templ/cmd/templ"
-uv "tinybird"
 
 # Installed by hand or from the Mac App Store, so brew does not see them
 # and cannot regenerate these lines. Kept by scripts/dump.sh.
