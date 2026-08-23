@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Beklenen symlink'lerin gercekten repoya bakip bakmadigini dogrular.
+# Verifies that every expected symlink really points into this repo.
 set -uo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -10,13 +10,13 @@ check() {
 
 	if [ ! -L "$dst" ]; then
 		if [ -e "$dst" ]; then
-			printf '  X %s — symlink degil, gercek dosya\n' "$pretty"
+			printf '  X %s — not a symlink, a real file\n' "$pretty"
 		else
-			printf '  X %s — yok\n' "$pretty"
+			printf '  X %s — missing\n' "$pretty"
 		fi
 		bad=$((bad + 1))
 	elif [ "$(readlink "$dst")" != "$src" ]; then
-		printf '  X %s — baska yere bakiyor: %s\n' "$pretty" "$(readlink "$dst")"
+		printf '  X %s — points elsewhere: %s\n' "$pretty" "$(readlink "$dst")"
 		bad=$((bad + 1))
 	else
 		printf '  . %s\n' "$pretty"
@@ -24,7 +24,6 @@ check() {
 }
 
 check home/.zshrc                "$HOME/.zshrc"
-check home/.zshenv               "$HOME/.zshenv"
 check home/.zprofile             "$HOME/.zprofile"
 check home/.gitconfig            "$HOME/.gitconfig"
 check home/.gitignore_global     "$HOME/.gitignore_global"
@@ -35,8 +34,8 @@ check sublime/Preferences.sublime-settings \
 	"$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
 
 if [ "$bad" -gt 0 ]; then
-	printf '\n%d sorun — duzeltmek icin: make link\n' "$bad"
+	printf '\n%d problem(s) — fix with: make link\n' "$bad"
 	exit 1
 fi
 echo
-echo "hepsi yerinde"
+echo "all in place"

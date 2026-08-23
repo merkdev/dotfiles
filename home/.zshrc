@@ -258,8 +258,8 @@ export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME/bin:$PATH"
 # pnpm end
 
-# corepack — sistemde olsa bile aktif edilmesini engelle
-alias corepack='echo "corepack devre dışı (kasıtlı). pnpm/npm/yarn doğrudan kullanılmalı." >&2; false'
+# corepack — keep it disabled even when it ships with the installed node
+alias corepack='echo "corepack is disabled on purpose. Use pnpm/npm/yarn directly." >&2; false'
 
 
 source $ZSH/oh-my-zsh.sh
@@ -271,8 +271,8 @@ export PATH="$HOME/go/bin:$PATH"
 # Claude Code
 export PATH="$HOME/.local/bin:$PATH"
 
-# --- zsh eklentileri ---
-# Bu ikisi en sonda kalmali: syntax-highlighting kendisinden once tanimlanan
-# widget'lari sarmalar, oh-my-zsh'tan sonra yuklenmezse vurgulama bozulur.
+# --- zsh plugins ---
+# These two must stay last: syntax-highlighting wraps the widgets defined
+# before it, so loading it ahead of oh-my-zsh breaks the highlighting.
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

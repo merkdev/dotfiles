@@ -28,7 +28,7 @@ Yerinde gercek dosya varsa silmez, `.bak-<zaman>` olarak yanina tasir.
 ## Ne nerede
 
 ```
-home/     ~/.zshrc, .zshenv, .zprofile, .gitconfig, .gitignore_global
+home/     ~/.zshrc, .zprofile, .gitconfig, .gitignore_global
 warp/     ~/.warp/ — settings.toml, themes/, tab_configs/
 sublime/  Sublime Text kullanici tercihleri
 Brewfile  formul, cask, tap, go ve uv araclari

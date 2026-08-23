@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Repodaki konfigleri ev dizinine symlink'ler.
-# Var olan gercek dosyalar silinmez, yanina .bak-<zaman> olarak tasinir.
+# Symlinks the configs in this repo into the home directory.
+# An existing real file is never deleted, it is moved aside as .bak-<stamp>.
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -12,11 +12,11 @@ link() {
 	local src="$REPO/$1" dst="$2"
 
 	if [ ! -e "$src" ]; then
-		echo "  ! kaynak yok, atlandi: $1" >&2
+		echo "  ! no such source, skipped: $1" >&2
 		return 0
 	fi
 
-	# Zaten bize bakan bir symlink mi?
+	# Already a symlink pointing at us?
 	if [ -L "$dst" ] && [ "$(readlink "$dst")" = "$src" ]; then
 		printf '  = %s\n' "${dst/#$HOME/~}"
 		n_skipped=$((n_skipped + 1))
@@ -31,10 +31,10 @@ link() {
 
 	mkdir -p "$(dirname "$dst")"
 
-	# Gercek dosya/dizin varsa once yedekle.
+	# Back up a real file or directory before replacing it.
 	if [ -e "$dst" ] && [ ! -L "$dst" ]; then
 		mv "$dst" "${dst}.bak-${STAMP}"
-		printf '  ~ yedek: %s\n' "${dst/#$HOME/~}.bak-${STAMP}"
+		printf '  ~ backed up: %s\n' "${dst/#$HOME/~}.bak-${STAMP}"
 		n_backed=$((n_backed + 1))
 	elif [ -L "$dst" ]; then
 		rm -f "$dst"
@@ -46,10 +46,9 @@ link() {
 }
 
 echo "dotfiles: $REPO"
-[ "$DRY" = "1" ] && echo "(DRY_RUN — hicbir sey degismiyor)"
+[ "$DRY" = "1" ] && echo "(DRY_RUN — nothing is changed)"
 
 link home/.zshrc                "$HOME/.zshrc"
-link home/.zshenv               "$HOME/.zshenv"
 link home/.zprofile             "$HOME/.zprofile"
 link home/.gitconfig            "$HOME/.gitconfig"
 link home/.gitignore_global     "$HOME/.gitignore_global"
@@ -61,4 +60,4 @@ link warp/tab_configs           "$HOME/.warp/tab_configs"
 link sublime/Preferences.sublime-settings \
 	"$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
 
-printf '\n%d baglandi, %d zaten baglıydi, %d yedeklendi\n' "$n_linked" "$n_skipped" "$n_backed"
+printf '\n%d linked, %d already linked, %d backed up\n' "$n_linked" "$n_skipped" "$n_backed"
