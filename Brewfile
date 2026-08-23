@@ -125,6 +125,74 @@ cask "ngrok"
 cask "orbstack"
 # Utility to uninstall apps and remove leftover files from old/uninstalled apps
 cask "pearcleaner"
+# Remote desktop application
+cask "anydesk"
+# Tracks how long you have been active
+cask "aware"
+# Display management
+cask "betterdisplay"
+# Free app that makes your Internet safer
+cask "cloudflare-warp"
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+# Collaborative team software
+cask "figma"
+# Git client
+cask "fork"
+# File manager and FTP client
+cask "forklift"
+# Desktop client for GitHub repositories
+cask "github"
+# Web browser
+cask "google-chrome"
+# Grammarly for desktop
+cask "grammarly-desktop"
+# Open-source video transcoder
+cask "handbrake-app"
+# Chromium-based web browser
+cask "helium-browser"
+# Menu bar app that shows the thermal state
+cask "hot"
+# GUI for Redis
+cask "medis"
+# Interactive tool for analyzing MongoDB data
+cask "mongodb-compass"
+# Calculator and converter
+cask "numi"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Utility to find and delete large, unused files
+cask "omnidisksweeper"
+# Collect, organise & share colours
+cask "sip-app"
+# Subversion client
+cask "smartsvn"
+# Text editor for code, markup and prose
+cask "sublime-text"
+# CSV file editor
+cask "table-tool"
+# Native GUI tool for relational databases
+cask "tableplus"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# SSH client
+cask "termius"
+# Unpacks archive files
+cask "the-unarchiver"
+# Open-source BitTorrent client
+cask "transmission"
+# Multimedia player
+cask "vlc"
+# Wallpaper manager
+cask "wallspace"
+# Rust-based terminal
+cask "warp"
+# Multiplayer code editor
+cask "zed"
+# Video communication and virtual meeting platform
+cask "zoom"
 go "github.com/air-verse/air"
 go "github.com/go-delve/delve/cmd/dlv"
 go "github.com/daixiang0/gci"
