@@ -1,6 +1,6 @@
-# Brewfile — bu makinedeki kurulu her sey.
-# Yeniden uretmek icin: make dump
-# Kurmak icin:        make brew   (veya: brew bundle)
+# Brewfile — everything installed on this machine.
+# Regenerate with: make dump
+# Install with:    make brew   (or: brew bundle)
 
 tap "anomaly/tap"
 tap "anomalyco/tap"
@@ -8,8 +8,6 @@ tap "ariga/tap", trusted: { formulae: ["atlas"] }
 tap "chargepoint/xcparse", "https://github.com/ChargePoint/homebrew-xcparse"
 tap "chiselstrike/tap"
 tap "hashicorp/tap"
-tap "heroku/brew"
-tap "kilo-org/tap", "https://github.com/Kilo-Org/homebrew-tap"
 tap "peterldowns/tap"
 tap "stripe/stripe-cli"
 tap "supabase/tap"
