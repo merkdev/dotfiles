@@ -106,8 +106,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
-alias del="trash"
-alias rm="echo do not directly delete any type of file! USE del"
+alias rm="echo do not directly delete any type of file! USE trash"
 
 alias sublime='open -a "Sublime Text"'
 
