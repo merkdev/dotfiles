@@ -15,6 +15,8 @@ tap "supabase/tap"
 brew "act"
 # Companion library to apr, the Apache Portable Runtime library
 brew "apr-util"
+# Code searching, linting, rewriting
+brew "ast-grep"
 # Database toolkit
 brew "atlas"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -45,6 +47,8 @@ brew "flyctl"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Audit git repos for secrets
+brew "gitleaks"
 # Open-source GitLab command-line tool
 brew "glab"
 # Open source programming language to build simple/reliable/efficient software
@@ -83,8 +87,12 @@ brew "ruby-build"
 brew "rbenv"
 # Rsync for cloud storage
 brew "rclone"
+# Intuitive find & replace CLI
+brew "sd"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Autoformat shell script source code
+brew "shfmt"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
 # Generate type safe Go from SQL
@@ -101,6 +109,8 @@ brew "tcl-tk"
 brew "trash", link: true
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
 # Internet file retriever
@@ -147,6 +157,7 @@ go "github.com/sqlc-dev/sqlc/cmd/sqlc"
 go "honnef.co/go/tools/cmd/staticcheck"
 go "github.com/swaggo/swag/cmd/swag"
 go "github.com/a-h/templ/cmd/templ"
+uv "tinybird"
 
 # Installed by hand or from the Mac App Store, so brew does not see them
 # and cannot regenerate these lines. Kept by scripts/dump.sh.
