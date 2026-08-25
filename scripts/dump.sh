@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# Regenerates the Brewfile from what brew has installed, without losing the
-# entries that were added by hand. Apps installed manually or from the Mac App
-# Store are unknown to brew, so a plain `brew bundle dump` would drop them.
+# Regenerate the Brewfile, keeping hand-added entries: manual and Mac App Store
+# installs are invisible to brew, so a plain `brew bundle dump` drops them.
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -39,9 +38,8 @@ comm -23 \
 		echo "# Installed by hand or from the Mac App Store, so brew does not see them"
 		echo "# and cannot regenerate these lines. Kept by scripts/dump.sh."
 		echo
-		# Carry each preserved entry over with the comment that sat above it.
-		# A blank line ends a comment block, which keeps the header above from
-		# being picked up as the first entry's comment on the next run.
+		# Carry each entry over with the comment above it. The blank-line reset
+		# stops the section header being read as the first entry's comment.
 		awk 'NR == FNR { want[$0] = 1; next }
 		     /^[[:space:]]*$/ { buf = ""; next }
 		     /^#/ { buf = buf $0 "\n"; next }

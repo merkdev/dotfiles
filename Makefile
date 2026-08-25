@@ -16,9 +16,7 @@ relink: ## Show what would change without touching anything (dry run)
 brew: ## Install everything in the Brewfile
 	brew bundle --file=Brewfile
 
-# macOS ships Python 3.9 in /usr/bin on a sealed system volume: it cannot be
-# removed or upgraded, and nothing should be installed into it. uv puts a real
-# interpreter in ~/.local/bin, which is already first on PATH.
+# /usr/bin/python3 is sealed by macOS and cannot be upgraded.
 python: ## Install the default Python via uv
 	uv python install 3.14 --default --preview-features python-install-default
 
