@@ -47,7 +47,7 @@ app_icon = "default"
 [appearance.window]
 override_blur = 11
 open_windows_at_custom_size = false
-zoom_level = 90
+zoom_level = 100
 
 [appearance.panes]
 focus_pane_on_hover = false
