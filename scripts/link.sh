@@ -63,4 +63,9 @@ link zed/keymap.json             "$HOME/.config/zed/keymap.json"
 link sublime/Preferences.sublime-settings \
 	"$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
 
+# Same script under both names; it decides from $0 which one it is shadowing.
+link bin/no-npm                 "$HOME/.local/bin/npm"
+link bin/no-npm                 "$HOME/.local/bin/npx"
+chmod +x "$REPO/bin/no-npm"
+
 printf '\n%d linked, %d already linked, %d backed up\n' "$n_linked" "$n_skipped" "$n_backed"
