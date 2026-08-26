@@ -101,8 +101,29 @@ plugins=(git)
 
 
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] \
+	&& . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+# Follow .nvmrc on every cd, and fall back to the default alias on the way out.
+# Unlike nvm's own snippet this never installs behind your back — it just says so.
+autoload -U add-zsh-hook
+load-nvmrc() {
+	local rc want
+	rc="$(nvm_find_nvmrc)"
+	if [ -n "$rc" ]; then
+		want="$(nvm version "$(cat "$rc")")"
+		if [ "$want" = "N/A" ]; then
+			echo "nvm: $(cat "$rc") is not installed — run 'nvm install'"
+		elif [ "$want" != "$(nvm version)" ]; then
+			nvm use --silent
+		fi
+	elif [ "$(nvm version)" != "$(nvm version default)" ]; then
+		nvm use default --silent
+	fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 

@@ -57,8 +57,6 @@ brew "go"
 brew "go-task"
 # Improved top (interactive process viewer)
 brew "htop"
-# Simple zero-configuration command-line HTTP server
-brew "http-server"
 # Curl statistics made simple
 brew "httpstat"
 # CLI for Infisical
