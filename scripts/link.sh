@@ -57,6 +57,8 @@ link warp/settings.toml         "$HOME/.warp/settings.toml"
 link warp/themes                "$HOME/.warp/themes"
 link warp/tab_configs           "$HOME/.warp/tab_configs"
 
+link mise/config.toml           "$HOME/.config/mise/config.toml"
+
 link zed/settings.json           "$HOME/.config/zed/settings.json"
 link zed/keymap.json             "$HOME/.config/zed/keymap.json"
 

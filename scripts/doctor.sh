@@ -30,6 +30,7 @@ check home/.gitignore_global     "$HOME/.gitignore_global"
 check warp/settings.toml         "$HOME/.warp/settings.toml"
 check warp/themes                "$HOME/.warp/themes"
 check warp/tab_configs           "$HOME/.warp/tab_configs"
+check mise/config.toml           "$HOME/.config/mise/config.toml"
 check zed/settings.json           "$HOME/.config/zed/settings.json"
 check zed/keymap.json             "$HOME/.config/zed/keymap.json"
 

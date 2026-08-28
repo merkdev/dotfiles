@@ -55,8 +55,6 @@ brew "git"
 brew "gitleaks"
 # Open-source GitLab command-line tool
 brew "glab"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # Task is a task runner/build tool that aims to be simpler and easier to use
 brew "go-task"
 # Improved top (interactive process viewer)
@@ -73,16 +71,14 @@ brew "libpq"
 brew "librsvg"
 # Generic library support script
 brew "libtool"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
-# Manage multiple Node.js versions
-brew "nvm"
 # Open source suite of directory software
 brew "openldap"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
-# Fast, disk space efficient package manager
-brew "pnpm"
 # Install various Ruby versions and implementations
 brew "ruby-build"
 # Ruby version manager
@@ -135,28 +131,6 @@ cask "ngrok"
 cask "orbstack"
 # Utility to uninstall apps and remove leftover files from old/uninstalled apps
 cask "pearcleaner"
-go "github.com/air-verse/air"
-go "github.com/go-delve/delve/cmd/dlv"
-go "github.com/daixiang0/gci"
-go "github.com/melkeydev/go-blueprint"
-go "github.com/ramya-rao-a/go-outline"
-go "github.com/uudashr/gocognit/cmd/gocognit"
-go "mvdan.cc/gofumpt"
-go "github.com/golangci/golangci-lint/v2/cmd/golangci-lint"
-go "github.com/jdudmesh/gomon"
-go "github.com/haya14busa/goplay/cmd/goplay"
-go "golang.org/x/tools/gopls"
-go "github.com/cweill/gotests/gotests"
-go "gotest.tools/gotestsum"
-go "golang.org/x/vuln/cmd/govulncheck"
-go "github.com/josharian/impl"
-go "github.com/evilmartians/lefthook"
-go "go.uber.org/mock/mockgen"
-go "go.uber.org/nilaway/cmd/nilaway"
-go "github.com/sqlc-dev/sqlc/cmd/sqlc"
-go "honnef.co/go/tools/cmd/staticcheck"
-go "github.com/swaggo/swag/cmd/swag"
-go "github.com/a-h/templ/cmd/templ"
 uv "tinybird"
 
 # Installed by hand or from the Mac App Store, so brew does not see them

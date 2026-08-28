@@ -68,30 +68,9 @@ plugins=(git)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] \
-	&& . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
-# Follow .nvmrc on every cd, and fall back to the default alias on the way out.
-# Unlike nvm's own snippet this never installs behind your back — it just says so.
-autoload -U add-zsh-hook
-load-nvmrc() {
-	local rc want
-	rc="$(nvm_find_nvmrc)"
-	if [ -n "$rc" ]; then
-		want="$(nvm version "$(cat "$rc")")"
-		if [ "$want" = "N/A" ]; then
-			echo "nvm: $(cat "$rc") is not installed — run 'nvm install'"
-		elif [ "$want" != "$(nvm version)" ]; then
-			nvm use --silent
-		fi
-	elif [ "$(nvm version)" != "$(nvm version default)" ]; then
-		nvm use default --silent
-	fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+# mise puts the right node/go/pnpm on PATH per directory, reading each project's
+# mise.toml on cd. Nothing is global: outside a project there is no toolchain.
+eval "$(mise activate zsh)"
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
@@ -243,19 +222,12 @@ cold-backup-prune() {
 # is keg-only so brew does not link it into the prefix.
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME/bin:$PATH"
-# pnpm end
-
 # corepack — keep it disabled even when it ships with the installed node
 alias corepack='echo "corepack is disabled on purpose. Use pnpm directly." >&2; false'
 
 
 source $ZSH/oh-my-zsh.sh
 eval "$(rbenv init - zsh)"
-
-export PATH="$HOME/go/bin:$PATH"
 
 
 # Claude Code

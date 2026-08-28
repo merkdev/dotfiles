@@ -1,0 +1,2 @@
+# Deliberately no [tools]: nothing is global. Every project pins its runtimes in
+# its own mise.toml, so a directory without one has no node/go at all — on purpose.
