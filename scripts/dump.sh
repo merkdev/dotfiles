@@ -18,6 +18,10 @@ fi
 
 brew bundle dump --file="$TMP" --force
 
+# Node ships corepack and npm inside its own lib, so `npm ls -g` reports them
+# as globals and the dump would tell a clean machine to install them.
+grep -vE '^npm "(corepack|npm)"$' "$TMP" > "$TMP.npm" && mv "$TMP.npm" "$TMP"
+
 ENTRY='^(brew|cask|tap|go|uv|cargo|npm|vscode|mas) '
 
 # Entries the old file had that the fresh dump does not know about.

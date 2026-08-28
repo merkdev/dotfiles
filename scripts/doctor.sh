@@ -35,8 +35,6 @@ check zed/keymap.json             "$HOME/.config/zed/keymap.json"
 
 check sublime/Preferences.sublime-settings \
 	"$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
-check bin/no-npm                 "$HOME/.local/bin/npm"
-check bin/no-npm                 "$HOME/.local/bin/npx"
 
 if [ "$bad" -gt 0 ]; then
 	printf '\n%d problem(s) — fix with: make link\n' "$bad"
