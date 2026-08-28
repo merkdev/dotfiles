@@ -13,6 +13,10 @@ tap "stripe/stripe-cli"
 tap "supabase/tap"
 # Run your GitHub Actions locally
 brew "act"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Static checker for GitHub Actions workflow files
+brew "actionlint"
 # Companion library to apr, the Apache Portable Runtime library
 brew "apr-util"
 # Code searching, linting, rewriting
@@ -87,8 +91,6 @@ brew "rbenv"
 brew "rclone"
 # Intuitive find & replace CLI
 brew "sd"
-# Static analysis and lint tool, for (ba)sh scripts
-brew "shellcheck"
 # Autoformat shell script source code
 brew "shfmt"
 # Command-line interface for https://speedtest.net bandwidth tests
