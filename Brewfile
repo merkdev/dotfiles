@@ -17,6 +17,14 @@ brew "act"
 brew "shellcheck"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
+# C parser in Python
+brew "pycparser"
+# C Foreign Function Interface for Python
+brew "cffi"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
 # Companion library to apr, the Apache Portable Runtime library
 brew "apr-util"
 # Code searching, linting, rewriting
@@ -25,10 +33,6 @@ brew "ast-grep"
 brew "atlas"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# C parser in Python
-brew "pycparser"
-# C Foreign Function Interface for Python
-brew "cffi"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
 # Containers for machine learning
@@ -103,8 +107,6 @@ brew "tailscale"
 brew "tcl-tk"
 # CLI tool that moves files or folder to the trash
 brew "trash", link: true
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Image format providing lossless and lossy compression for web images
