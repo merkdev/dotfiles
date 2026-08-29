@@ -43,8 +43,6 @@ brew "libssh2"
 brew "rtmpdump"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Text processing system for reStructuredText
-brew "docutils"
 # Identify or delete duplicate files
 brew "fdupes"
 # Play, record, convert, and stream select audio and video codecs
