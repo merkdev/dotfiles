@@ -15,7 +15,7 @@ compact_subtitle = "working_directory"
 primary_info = "working_directory"
 enabled = true
 view_mode = "expanded"
-display_granularity = "tabs"
+display_granularity = "panes"
 show_panel_in_restored_windows = false
 tab_item_mode = "summary"
 show_pr_link = true
@@ -30,6 +30,12 @@ preserve_active_tab_color = false
 tab_close_button_position = "right"
 show_indicators_button = true
 
+[appearance.tabs.header_toolbar_chip_selection]
+
+[appearance.tabs.header_toolbar_chip_selection.custom]
+left = ["tabs_panel", "tools_panel"]
+right = ["code_review", "notifications_mailbox"]
+
 [appearance.text]
 ai_font_name = "JetBrains Mono"
 ligature_rendering_enabled = true
@@ -43,6 +49,7 @@ use_thin_strokes = "never"
 
 [appearance.icon]
 app_icon = "default"
+show_dock_icon = true
 
 [appearance.window]
 override_blur = 11
@@ -80,6 +87,9 @@ nld_in_terminal_enabled = true
 
 [agents.warp_agent.active_ai]
 enabled = true
+
+[agents.warp_agent.other]
+show_conversation_history = true
 
 [agents.third_party]
 should_render_cli_agent_toolbar = false
@@ -181,3 +191,9 @@ is_settings_sync_enabled = true
 
 [code.editor]
 open_file_editor = "system_default"
+show_code_review_button = true
+show_project_explorer = true
+show_global_search = true
+
+[warp_drive]
+enabled = true
