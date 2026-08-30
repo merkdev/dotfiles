@@ -23,8 +23,6 @@ brew "pycparser"
 brew "cffi"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Automate deployment, configuration, and upgrading
-brew "ansible"
 # Companion library to apr, the Apache Portable Runtime library
 brew "apr-util"
 # Code searching, linting, rewriting
@@ -105,8 +103,6 @@ brew "tailscale"
 brew "tcl-tk"
 # CLI tool that moves files or folder to the trash
 brew "trash", link: true
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
 # Internet file retriever
@@ -131,7 +127,6 @@ cask "ngrok"
 cask "orbstack"
 # Utility to uninstall apps and remove leftover files from old/uninstalled apps
 cask "pearcleaner"
-uv "tinybird"
 
 # Installed by hand or from the Mac App Store, so brew does not see them
 # and cannot regenerate these lines. Kept by scripts/dump.sh.
