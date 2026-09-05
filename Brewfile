@@ -17,12 +17,6 @@ brew "act"
 brew "shellcheck"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
-# C parser in Python
-brew "pycparser"
-# C Foreign Function Interface for Python
-brew "cffi"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Companion library to apr, the Apache Portable Runtime library
 brew "apr-util"
 # Code searching, linting, rewriting
@@ -41,6 +35,8 @@ brew "libssh2"
 brew "rtmpdump"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# CLI tool for checking domain availability using RDAP and WHOIS protocols
+brew "domain-check"
 # Identify or delete duplicate files
 brew "fdupes"
 # Play, record, convert, and stream select audio and video codecs
@@ -103,6 +99,8 @@ brew "tailscale"
 brew "tcl-tk"
 # CLI tool that moves files or folder to the trash
 brew "trash", link: true
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
 # Internet file retriever
