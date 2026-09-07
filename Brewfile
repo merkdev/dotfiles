@@ -85,6 +85,8 @@ brew "rclone"
 brew "sd"
 # Autoformat shell script source code
 brew "shfmt"
+# SMART hard drive monitoring
+brew "smartmontools"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
 # Generate type safe Go from SQL
