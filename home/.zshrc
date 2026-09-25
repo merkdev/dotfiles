@@ -118,7 +118,9 @@ cold-backup() {
 
 	# Belt-and-suspenders on top of .gitignore: strip secret-shaped paths
 	# even if a project's .gitignore doesn't already cover them.
-	files=$(git -C "$root" ls-files --cached --others --exclude-standard \
+	# quotePath=false: git otherwise C-quotes non-ASCII names ("M\303\274..."),
+	# zip -@ cannot find them and -q hides the skip.
+	files=$(git -C "$root" -c core.quotePath=false ls-files --cached --others --exclude-standard \
 		| grep -Ev '(^|/)\.env(\.|$)' \
 		| grep -Ev '\.(pem|key)$' \
 		| grep -Ev '(^|/)id_(rsa|ed25519)' \
