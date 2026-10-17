@@ -7,6 +7,7 @@ tap "anomalyco/tap"
 tap "ariga/tap", trusted: { formulae: ["atlas"] }
 tap "chargepoint/xcparse", "https://github.com/ChargePoint/homebrew-xcparse"
 tap "chiselstrike/tap"
+tap "egoist/tap"
 tap "hashicorp/tap"
 tap "peterldowns/tap"
 tap "stripe/stripe-cli"
@@ -159,6 +160,8 @@ cask "handbrake-app"
 cask "helium-browser"
 # Menu bar app that shows the thermal state
 cask "hot"
+# Keyboard-first terminal workspace with projects, sessions, and git
+cask "egoist/tap/kero"
 # GUI for Redis
 cask "medis"
 # Interactive tool for analyzing MongoDB data
