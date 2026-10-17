@@ -1,0 +1,6 @@
+theme-dark = "Material Dark"
+theme-light = "Monokai Pro Light"
+font-size = 13
+toolbar.visibility = "auto"
+terminal.cursor-blinking = false
+terminal.restore-history = true
