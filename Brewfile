@@ -53,7 +53,6 @@ brew "gitleaks"
 # Open-source GitLab command-line tool
 brew "glab"
 # Task is a task runner/build tool that aims to be simpler and easier to use
-brew "go-task"
 # Improved top (interactive process viewer)
 brew "htop"
 # Curl statistics made simple
