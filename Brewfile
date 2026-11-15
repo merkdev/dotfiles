@@ -44,6 +44,8 @@ brew "fdupes"
 brew "ffmpeg"
 # Command-line tools for fly.io services
 brew "flyctl"
+# CLI tool for interacting with Forgejo
+brew "forgejo-cli"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
