@@ -80,7 +80,9 @@ alias sublime='open -a "Sublime Text"'
 
 # Root of the cold-backup archive tree. Override per-invocation to test
 # against a scratch location: `COLD_BACKUP_REMOTE=/tmp/x cold-backup-prune`.
-COLD_BACKUP_REMOTE="${COLD_BACKUP_REMOTE:-dropbox kamer:Backups}"
+# A function, not a variable: Claude Code's `!` shells inherit functions from the
+# shell snapshot, but not variables the launching process never had.
+cold_backup_remote() { printf '%s' "${COLD_BACKUP_REMOTE:-dropbox kamer:Backups}"; }
 
 # Cold backup — zip the repo you are standing in and stream it to Dropbox via
 # rclone. No automatic trigger — run it yourself whenever you want a snapshot:
@@ -101,7 +103,7 @@ cold-backup() {
 	root=$(git rev-parse --show-toplevel 2>/dev/null) || { echo "[cold-backup] not inside a git repo" >&2; return 1; }
 	name=$(basename "$root")
 	stamp=$(date -u +%Y-%m-%dT%H-%M-%SZ)
-	dir="${COLD_BACKUP_REMOTE}/${name}"
+	dir="$(cold_backup_remote)/${name}"
 	target="${dir}/${name}-${stamp}.zip"
 	part="${target}.part"
 
@@ -158,7 +160,7 @@ cold-backup-prune() {
 	local root name dir listing all old parts reply f keep=${1:-10} ntotal nold nfail=0 origin
 	root=$(git rev-parse --show-toplevel 2>/dev/null) || { echo "[cold-backup-prune] not inside a git repo" >&2; return 1; }
 	name=$(basename "$root")
-	dir="${COLD_BACKUP_REMOTE}/${name}"
+	dir="$(cold_backup_remote)/${name}"
 
 	# Refuse to prune a folder another repo of the same basename owns; see the
 	# .origin note in cold-backup.
