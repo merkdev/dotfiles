@@ -127,6 +127,8 @@ cask "ngrok"
 cask "orbstack"
 # Utility to uninstall apps and remove leftover files from old/uninstalled apps
 cask "pearcleaner"
+# Command-line interface for Fly.io Sprites
+cask "sprites"
 
 # Installed by hand or from the Mac App Store, so brew does not see them
 # and cannot regenerate these lines. Kept by scripts/dump.sh.
