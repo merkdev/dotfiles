@@ -36,17 +36,17 @@
   }
  },
  "outline_panel": {
-  "dock": "right"
+  "dock": "left"
  },
  "collaboration_panel": {
-  "dock": "right"
+  "dock": "left"
  },
  "buffer_font_family": "JetBrains Mono",
  "edit_predictions": {
   "provider": "zed"
  },
  "project_panel": {
-  "dock": "right"
+  "dock": "left"
  },
  "base_keymap": "SublimeText",
  "soft_wrap": "prefer_line",
@@ -80,7 +80,7 @@
  },
 	"agent": {
 		"single_file_review": false,
-  "dock": "left",
+  "dock": "right",
   "tool_permissions": {
    "default": "allow"
   },
