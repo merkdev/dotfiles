@@ -5,7 +5,7 @@
 
 new-session-directory = project
 theme = light:Monokai Pro Light,dark:Monokai Pro
-diff-layout = auto
+diff-layout = unified
 font-size = 13
 macos-show-app-icon = dock
 window-translucent = true
@@ -17,4 +17,4 @@ dock-bounce = false
 sidebar-rows = compact
 git-status = true
 focus-follows-mouse = false
-wrap-lines = true
+wrap-lines = false
