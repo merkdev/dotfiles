@@ -20,6 +20,8 @@ brew "shellcheck"
 brew "actionlint"
 # Companion library to apr, the Apache Portable Runtime library
 brew "apr-util"
+# Fast, lightweight CLI for App Store Connect
+brew "asc"
 # Code searching, linting, rewriting
 brew "ast-grep"
 # Database toolkit
