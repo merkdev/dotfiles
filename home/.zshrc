@@ -221,6 +221,40 @@ cold-backup-prune() {
 	echo "[cold-backup-prune] deleted ${nold}, ${keep} newest kept"
 }
 
+# dlp — yt-dlp in a throwaway container, so no runtime lands on the host;
+# downloads go to $PWD. `dlp --rebuild` updates yt-dlp (`-U` cannot, inside the image).
+dlp() {
+	local image_name="yt-dlp-local" force_rebuild=false
+	[[ "${1:-}" == "--rebuild" ]] && { force_rebuild=true; shift; }
+
+	# Built from stdin: no build context needed. ffmpeg merges video/audio, deno solves YouTube's JS challenges.
+	if $force_rebuild || ! docker image inspect "$image_name" >/dev/null 2>&1; then
+		local build_flags=()
+		$force_rebuild && build_flags=(--pull --no-cache)
+		docker build "${build_flags[@]}" -t "$image_name" - <<'DOCKERFILE' || return 1
+FROM python:3.13-alpine
+RUN apk add --no-cache ffmpeg deno \
+ && pip install --no-cache-dir "yt-dlp[default]"
+WORKDIR /downloads
+ENTRYPOINT ["yt-dlp"]
+DOCKERFILE
+	fi
+	(( $# )) || return 0
+
+	# VK throttles single-file formats to playback speed; parallel HLS fragments are ~15x faster.
+	# Defaults go first, so a -f / -N / -o given on the command line overrides them.
+	local default_args=(-N 16 -o "%(title).150B [%(id)s].%(ext)s")
+	local vk_url_pattern='^https?://([a-z0-9-]+\.)?(vk\.com|vk\.ru|vkvideo\.ru)/'
+	local dlp_argument
+	for dlp_argument in "$@"; do
+		[[ "$dlp_argument" =~ $vk_url_pattern ]] && { default_args+=(-f "b[protocol^=m3u8]/bv*+ba/b"); break; }
+	done
+
+	local tty_flags=()
+	[[ -t 0 && -t 1 ]] && tty_flags=(-it)
+	docker run --rm "${tty_flags[@]}" -v "$PWD:/downloads" "$image_name" "${default_args[@]}" "$@"
+}
+
 
 # Postgres runs in Docker; this is only the client (psql, pg_dump), and libpq
 # is keg-only so brew does not link it into the prefix.
