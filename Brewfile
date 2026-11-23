@@ -78,6 +78,8 @@ brew "mkcert"
 brew "openldap"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
+# PDF rendering library (pdftoppm, pdftotext); used by Claude Code to read PDFs
+brew "poppler"
 # Install various Ruby versions and implementations
 brew "ruby-build"
 # Ruby version manager
