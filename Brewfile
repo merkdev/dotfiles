@@ -12,6 +12,7 @@ tap "hashicorp/tap"
 tap "peterldowns/tap"
 tap "stripe/stripe-cli"
 tap "supabase/tap"
+tap "teamookla/speedtest", trusted: { formulae: ["speedtest"] }
 # Run your GitHub Actions locally
 brew "act"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -89,8 +90,8 @@ brew "sd"
 brew "shfmt"
 # SMART hard drive monitoring
 brew "smartmontools"
-# Command-line interface for https://speedtest.net bandwidth tests
-brew "speedtest-cli"
+# Ookla Speedtest CLI (native binary)
+brew "speedtest"
 # Generate type safe Go from SQL
 brew "sqlc"
 # Command-line tool for Stripe
