@@ -74,6 +74,8 @@ brew "libtool"
 brew "mise"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
+# Lightweight PDF and XPS viewer and toolkit (mutool)
+brew "mupdf"
 # Open source suite of directory software
 brew "openldap"
 # Cryptography and SSL/TLS Toolkit
