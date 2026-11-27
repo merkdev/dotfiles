@@ -28,7 +28,7 @@ extension_name() {
 
 dump() {
 	local profile_dir extension_dir version_dir extension_id
-	local entries_file
+	# Global, not local: the EXIT trap runs after this function has returned.
 	entries_file="$(mktemp -t helium-extensions.XXXXXX)"
 	trap 'trash "$entries_file" 2>/dev/null || true' EXIT
 
