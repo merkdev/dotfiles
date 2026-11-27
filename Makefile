@@ -1,11 +1,11 @@
 .DEFAULT_GOAL := help
-.PHONY: help install link relink brew dump doctor
+.PHONY: help install link relink brew dump doctor helium helium-dump
 
 help: ## Show this list
 	@grep -E '^[a-z-]+:.*?## .*$$' $(MAKEFILE_LIST) \
-		| awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
+		| awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}'
 
-install: brew link ## Install everything: brew bundle + symlinks
+install: brew link helium ## Install everything: brew bundle + symlinks + Helium extensions
 
 link: ## Symlink the configs into the home directory (backs up what is there)
 	@bash scripts/link.sh
@@ -22,3 +22,9 @@ dump: ## Regenerate the Brewfile from this machine (keeps hand-added entries)
 
 doctor: ## Check that the symlinks are in place
 	@bash scripts/doctor.sh
+
+helium: ## Register the Helium extensions in helium/extensions.txt (installed on next launch)
+	@bash scripts/helium-extensions.sh install
+
+helium-dump: ## Regenerate helium/extensions.txt from the installed Helium profiles
+	@bash scripts/helium-extensions.sh dump

@@ -1,0 +1,24 @@
+# Helium extensions from the Chrome Web Store, one id per line (text after it is a label).
+# Regenerate with: make helium-dump
+# Install with:    make helium
+
+aapbdbdomjkkjkaonfhkkikfgjllcleb  Google Translate
+bdokeillmfmaogjpficejjcjekcflkdh  Webshare Proxy Extension
+cidlcjdalomndpeagkjpnefhljffbnlo  Toggle JavaScript
+dhdgffkkebhmkfjojejmpbldmpobfkfo  Tampermonkey
+efknglbfhoddmmfabeihlemgekhhnabb  JSON Viewer
+ekkjohcjbjcjjifokpingdbdlfekjcgi  jQuery Injector
+fcoeoabgfenejglbffodgkkbkcdhcgfn  Claude
+fgpepdeaaldghnmehdmckfibbhcjoljj  Webpage to Markdown
+fllaojicojecljbmefodhfapmkghcbnh  Google Analytics Opt-out Add-on (by Google)
+hnmpcagpplmpfojmgmnngilcnanddlhb  Free VPN For Chrome - VPN Extension - Windscribe
+jabopobgcpjmedljpbcaablpmlmfcogm  WhatFont
+jlmpjdjjbgclbocgajdjefcidcncaied  daily.dev | Where developers discover what's next
+jniaaefcnafpmgehafefiefnogdihfke  Dark Mode For Sahibinden – Koyu Tema
+jnjobgjobffgmgfnkpkjfjkkfhfikmfl  Password generator
+ldgfbffkinooeloadekpmfoklnobpien  Raindrop.io
+lmjnegcaeklhafolokijcfjliaokphfk  Video Download Helper
+mpckalcodookackleecihhnngdibelif  AlarmBot: Price Tracker & Price Drop Alerts for Amazon, eBay & Any Store
+mpiodijhokgodhhofbcjdecpffjipkle  SingleFile
+oacfincmbjdddohpjgjjnhocgljhpeda  Frappe — Twitch, Kick, YouTube Deleted Messages
+pejdijmoenmkgeppbflobdenhhabjlaj  iCloud Passwords
